@@ -1,0 +1,30 @@
+<h3>Add Employee</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Employee Name:&nbsp;&nbsp;</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="firstName">
+    </div><br/>
+
+    <div class="form-group">
+      <label for="name">Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" class="form-control" id="location" required [(ngModel)]="employee.location" name="lastName">
+    </div><br/>
+
+    <div class="form-group">
+      <label for="name">Email Id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.email" name="emailId">
+    </div><br/>
+
+    <div class="form-group">
+      <label for="name">Mobile:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" class="form-control" id="mobile" required [(ngModel)]="employee.mobile" name="mobile">
+    </div><br/>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
